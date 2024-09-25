@@ -33,4 +33,60 @@
   .sun {
     fill: transparent;
   }
+
+  :global(.dark) .sun {
+    fill: black;
+  }
+
+  :global(.dark) .moon {
+    fill: transparent;
+  }
 </style>
+
+<script>
+  const DARK_THEM_CLASS = 'dark';
+  const COLOR_MODE = 'color-mode';
+  const LIGTH_THEME = 'light';
+  const DARK_THEME = 'dark';
+
+  // Grab toogle
+  const toogle = document.querySelector('button');
+  const rootElement = document.documentElement;
+
+  const getItitialColorMode = (): 'light' | 'dark' => {
+    const previousColorMode = window.localStorage.getItem(COLOR_MODE);
+
+    if (previousColorMode) {
+      return previousColorMode as 'light' | 'dark';
+    }
+
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return DARK_THEME;
+    }
+    return LIGTH_THEME;
+  };
+
+  const initialColorMode = getItitialColorMode();
+
+  const setInitialColorMode = (mode: 'light' | 'dark') => {
+    if (mode === LIGTH_THEME) {
+      rootElement.classList.remove(DARK_THEM_CLASS);
+    } else {
+      rootElement.classList.add(DARK_THEM_CLASS);
+    }
+  };
+
+  setInitialColorMode(initialColorMode);
+
+  if (toogle) {
+    toogle.addEventListener('click', () => {
+      rootElement.classList.toggle(DARK_THEM_CLASS);
+
+      const colorMode = rootElement.classList.contains(DARK_THEME)
+        ? DARK_THEME
+        : LIGTH_THEME;
+
+      window.localStorage.setItem(COLOR_MODE, colorMode);
+    });
+  }
+</script>

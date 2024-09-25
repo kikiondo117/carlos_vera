@@ -4,50 +4,50 @@ import Main from '../layouts/Main.astro';
 // Component script section
 
 const profilePicture =
-	'https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png';
+  'https://media.licdn.com/dms/image/v2/D4E03AQE115c4RB71Dg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1723492047015?e=1732752000&v=beta&t=U6NnWFN6xOhwOaF9DB04iQ2VcmsMJ2D55TL7hs1k-9Y';
 ---
 
 <!-- component template -->
 <Main>
-	<div class="profile">
-		<img
-			class="profile__picture"
-			src={profilePicture}
-			alt="Profile Picture"
-			width="100px"
-			height="100px"
-		/>
+  <div class="profile">
+    <img
+      class="profile__picture"
+      src={profilePicture}
+      alt="Profile Picture"
+      width="100px"
+      height="100px"
+    />
 
-		<div class="profile__details">
-			<h1>Carlos Vera</h1>
-			<h2>Sr Front-End Developer</h2>
-			<p>Ayudando a compartir un poco de mi conocimiento.</p>
-		</div>
-	</div>
+    <div class="profile__details">
+      <h1>Carlos Vera</h1>
+      <h2>Sr Front-End Developer</h2>
+      <p>Ayudando a compartir un poco de mi conocimiento.</p>
+    </div>
+  </div>
 </Main>
 
 <style>
-	.profile {
-		display: flex;
-		align-items: flex-start;
-		flex-wrap: wrap;
-		padding: 1rem 0 3rem 0;
-	}
+  .profile {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 1rem 0 3rem 0;
+  }
 
-	.profile__details {
-		flex: 1 0 300px;
-	}
+  .profile__details {
+    flex: 1 0 300px;
+  }
 
-	.profile__details > h1 {
-		margin-top: 0;
-	}
+  .profile__details > h1 {
+    margin-top: 0;
+  }
 
-	.profile__picture {
-		border-radius: 500%;
-		margin: 0 2rem 1rem 0;
-	}
+  .profile__picture {
+    border-radius: 500%;
+    margin: 0 2rem 1rem 0;
+  }
 </style>
 
 <script>
-	console.log('hola c:');
+  console.log('hola c:');
 </script>

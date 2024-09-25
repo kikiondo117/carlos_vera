@@ -1,8 +1,31 @@
+html {
+  --background: white;
+  --grey-200: #222222;
+  --grey-400: #444444;
+  --grey-600: #333333;
+  --grey-900: #111111;
+}
+
+html.dark {
+  --background: black;
+  --grey-200: #eaeaea;
+  --grey-400: #acacac;
+  --grey-600: #fff;
+  --grey-900: #fafafa;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  padding: 0 0.5rem;
+  color: var(--grey-600);
+  background-color: var(--background);
+}
+
 h1 {
   font-size: 3rem;
 }
 
-h1+h2 {
+h1 + h2 {
   font-size: 1.1rem;
   margin-top: -1.4rem;
   opacity: 0.9;
@@ -12,5 +35,4 @@ h1+h2 {
 main {
   max-width: 40rem;
   margin: auto;
-  font-family: 'Roboto Mono', monospace;
 }
