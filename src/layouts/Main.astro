@@ -1,0 +1,31 @@
+---
+// Sin utilizar el style is:global podemos optar por esta alternativa
+// Mas simple de utilizar.
+import '../styles/global.css';
+import Footer from '../components/Footer.astro';
+import NavigationBar from '../components/NavigationBar.astro';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ks Web" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>KS</title>
+  </head>
+  <body>
+    <main>
+      <!-- Content of the page ... -->
+      <NavigationBar />
+      <slot />
+      <Footer />
+    </main>
+  </body>
+</html>

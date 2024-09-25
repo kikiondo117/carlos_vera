@@ -1,16 +1,53 @@
 ---
+import Main from '../layouts/Main.astro';
 
+// Component script section
+
+const profilePicture =
+	'https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<!-- component template -->
+<Main>
+	<div class="profile">
+		<img
+			class="profile__picture"
+			src={profilePicture}
+			alt="Profile Picture"
+			width="100px"
+			height="100px"
+		/>
+
+		<div class="profile__details">
+			<h1>Carlos Vera</h1>
+			<h2>Sr Front-End Developer</h2>
+			<p>Ayudando a compartir un poco de mi conocimiento.</p>
+		</div>
+	</div>
+</Main>
+
+<style>
+	.profile {
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		padding: 1rem 0 3rem 0;
+	}
+
+	.profile__details {
+		flex: 1 0 300px;
+	}
+
+	.profile__details > h1 {
+		margin-top: 0;
+	}
+
+	.profile__picture {
+		border-radius: 500%;
+		margin: 0 2rem 1rem 0;
+	}
+</style>
+
+<script>
+	console.log('hola c:');
+</script>
