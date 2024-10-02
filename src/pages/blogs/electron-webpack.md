@@ -5,4 +5,4 @@ subtitle: 'Remix las ventajas de tener una fullstack app'
 poster: '/images/electron.png'
 ---
 
-Hola este es un blog de react y remix
+Hola este es un blog de como confiurar electron utilizando webpack.
