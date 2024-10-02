@@ -1,0 +1,72 @@
+---
+export type Props = {
+  to: string;
+  title: string;
+  gradientFrom: string;
+  gradientTo: string;
+};
+
+const { to, title, gradientFrom, gradientTo } = Astro.props;
+---
+
+<a href={to} class="card">
+  <div class="card__inner">
+    <div class="card__title">{title}</div>
+    <div class="card__footer">&rarr;</div>
+  </div>
+</a>
+
+<!-- Template directive -->
+<style define:vars={{ gradientFrom, gradientTo }}>
+  .card {
+    /* Definimos nuestra variable local */
+    --radius: 10px;
+    background-image: linear-gradient(
+      to right,
+      var(--gradientFrom),
+      var(--gradientTo)
+    );
+
+    padding: 4px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+
+    flex-basis: 100%;
+    flex-grow: 1;
+  }
+
+  .card:hover {
+    transform: scale(0.95);
+  }
+
+  .card__inner {
+    background: var(--background);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card__footer {
+    margin: auto 0 0 auto;
+    padding-top: 2rem;
+    font-size: 1.2rem;
+    color: var(--grey-900);
+  }
+
+  .card__title {
+    font-size: 1.2rem;
+    color: var(--grey-900);
+    font-weight: 500;
+    line-height: 1.75rem;
+  }
+</style>
+
+<!--
+  Hace los mismo en script, hace que sea inline automaticamente
+  Aparte de que este es agregado como un function auto executed por cada vez que se
+  renderiza el componente.
+
+  Una opcion es pasarle el valor a la etiqueta con data prop
+-->

@@ -1,14 +1,21 @@
 ---
+import Cards from '../components/Cards.astro';
 import Main from '../layouts/Main.astro';
 
 // Component script section
 
 const profilePicture =
   'https://media.licdn.com/dms/image/v2/D4E03AQE115c4RB71Dg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1723492047015?e=1732752000&v=beta&t=U6NnWFN6xOhwOaF9DB04iQ2VcmsMJ2D55TL7hs1k-9Y';
+
+const blogs = await Astro.glob<{
+  title: string;
+  poster: string;
+  subtitle: string;
+}>('./blogs/*.md');
 ---
 
 <!-- component template -->
-<Main>
+<Main title="Carlos Vera - Kikis">
   <div class="profile">
     <img
       class="profile__picture"
@@ -24,6 +31,51 @@ const profilePicture =
       <p>Ayudando a compartir un poco de mi conocimiento.</p>
     </div>
   </div>
+
+  <Cards
+    cards={[
+      {
+        title: 'A summary of my work history',
+        gradientFrom: '#fde68a',
+        gradientTo: '#fca5a5',
+        to: '/work-summary',
+      },
+      {
+        title: 'What I do beyond technology',
+        gradientFrom: '#6ee7b7',
+        gradientTo: '#9333ea',
+        to: '/beyond-tech',
+      },
+      // {
+      //   title: 'Blogs',
+      //   gradientFrom: '#fde68a',
+      //   gradientTo: '#fca5a5',
+      //   to: '/work-summary',
+      // },
+    ]}
+  />
+
+  <div class="featured-blogs">
+    <h3 class="featured-blogs__title">Featured Blogs</h3>
+    <p class="featured-blogs__description">
+      Opinion pieces that will change everything you know about web development.
+    </p>
+  </div>
+
+  <ol class="blogs">
+    {
+      blogs.map((blog) => {
+        return (
+          <li class="blog__list">
+            <a class="blog__link" href={blog.url}>
+              {/* Frontmatter porque es un archivo .md */}
+              {blog.frontmatter.title}
+            </a>
+          </li>
+        );
+      })
+    }
+  </ol>
 </Main>
 
 <style>
@@ -45,6 +97,43 @@ const profilePicture =
   .profile__picture {
     border-radius: 500%;
     margin: 0 2rem 1rem 0;
+  }
+
+  .featured-blogs {
+    margin: 0;
+    padding: 3rem 0 0 0;
+  }
+
+  .featured-blogs__title {
+    font-size: 2rem;
+    color: var(--grey-900);
+  }
+  .featured-blogs__description {
+    margin-top: -1.2rem;
+  }
+
+  .blogs {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .blog-list {
+    border-bottom: 1px solid;
+    border-color: var(--grey-200);
+  }
+
+  .blog__link {
+    opacity: 1;
+    height: 100%;
+    display: block;
+    padding: 1rem 0;
+    color: var(--gray-200);
+    text-decoration: none;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  .blog__link:hover {
+    opacity: 0.7;
   }
 </style>
 
