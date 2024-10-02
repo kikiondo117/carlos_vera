@@ -5,4 +5,4 @@ subtitle: 'Remix las ventajas de tener una fullastak app'
 poster: '/images/electron.png'
 ---
 
-Hola este es un blog de react y remix
+Esto es un blog de porque me gusta remix y porque no me gusta remix.
