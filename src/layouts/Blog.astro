@@ -9,12 +9,15 @@ type Props = MarkdownLayoutProps<{
 }>;
 
 const { frontmatter } = Astro.props as Props;
+const baseUrl = import.meta.env.PROD
+  ? '/carlos_vera/'
+  : 'http://localhost:4321/';
 ---
 
 <Main title={frontmatter.title}>
   <figure class="figure">
     <img
-      src={frontmatter.poster}
+      src={baseUrl + frontmatter.poster}
       alt="Poster"
       width="100%"
       height="280px"
