@@ -14,9 +14,9 @@ Hi, this is a small page about my hobbies and interests beyond tech and programm
 - 📻 I have a small project with my family to make a radio station online.
 
 <center>
-  <img src="/images/moto2.jpg" alt="moto" width="200px" height="200px" />
-  <img src="/images/ks.png" alt="moto" width="200px" height="200px" />
-  <img src="/images/radio.jpeg" alt="moto" width="200px" height="200px" />  
+  <img src="/carlos_vera/images/moto2.jpg" alt="moto" width="200px" height="200px" />
+  <img src="/carlos_vera/images/ks.png" alt="moto" width="200px" height="200px" />
+  <img src="/carlos_vera/images/radio.jpeg" alt="moto" width="200px" height="200px" />  
 </center>
 
 ## Personal Projects
