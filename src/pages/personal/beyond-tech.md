@@ -7,7 +7,7 @@ poster: '/images/kikis.png'
 
 Hi, this is a small page about my hobbies and interests beyond tech and programming, I will be continuously updating this page with new information 🧑‍💻
 
-# Hobbies 🎉
+# Hobbies
 
 - 🏍️ I love to drive my motorcycles and discover new places. I try to do it every month at least once.
 - 🎧 Really like to mix music and I have my own brand call kikis 404
