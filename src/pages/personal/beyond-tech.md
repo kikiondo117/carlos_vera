@@ -13,12 +13,6 @@ Hi, this is a small page about my hobbies and interests beyond tech and programm
 - 🎧 Really like to mix music and I have my own brand call kikis 404
 - 📻 I have a small project with my family to make a radio station online.
 
-<center>
-  <img src="/carlos_vera/images/moto2.jpg" alt="moto" width="200px" height="200px" />
-  <img src="/carlos_vera/images/ks.png" alt="moto" width="200px" height="200px" />
-  <img src="/carlos_vera/images/radio.jpeg" alt="moto" width="200px" height="200px" />  
-</center>
-
 ## Personal Projects
 
 My plan is create a website to **share** my knowledge about web development, this is my first project with this stack, I really love Remix (React) but Astro is a good tool to create static websites and blogs 🥳.
