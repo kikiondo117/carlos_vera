@@ -1,15 +1,26 @@
 ---
 // come back here
 import ThemeToggler from './ThemeToggler.astro';
+
+const personalPages = await Astro.glob<{
+  title: string;
+  poster: string;
+  subtitle: string;
+}>('../pages/personal/*.md');
 ---
 
 <nav>
   <ul>
     <li><a href="/">Home</a></li>
-    <li><a href="/work-summary">Work summary</a></li>
-    <li><a href="/beyond_tech">Beyond tech</a></li>
-    <li><a href="/blogs">Blogs</a></li>
-    <li><a href="/electron_webpack">Webpack</a></li>
+    {
+      personalPages.map((page) => {
+        return (
+          <li>
+            <a href={page.url}>{page.frontmatter.title}</a>
+          </li>
+        );
+      })
+    }
   </ul>
 
   <ThemeToggler />
