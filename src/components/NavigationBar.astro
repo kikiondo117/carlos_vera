@@ -7,11 +7,15 @@ const personalPages = await Astro.glob<{
   poster: string;
   subtitle: string;
 }>('../pages/personal/*.md');
+
+const baseUrl = import.meta.env.PROD
+  ? '/carlos_vera'
+  : 'http://localhost:4321/';
 ---
 
 <nav>
   <ul>
-    <li><a href="/">Home</a></li>
+    <li><a href={baseUrl}>Home</a></li>
     {
       personalPages.map((page) => {
         return (

@@ -13,9 +13,7 @@ const blogs = await Astro.glob<{
   subtitle: string;
 }>('./blogs/*.md');
 
-const baseUrl = import.meta.env.PROD
-  ? '/carlos_vera/'
-  : 'http://localhost:4321';
+const baseUrl = import.meta.env.PROD ? '/carlos_vera' : 'http://localhost:4321';
 ---
 
 <!-- component template -->
