@@ -43,18 +43,20 @@
   }
 </style>
 
-<script is:inline>
+<script>
   const DARK_THEM_CLASS = 'dark';
   const COLOR_MODE = 'color-mode';
   const LIGTH_THEME = 'light';
   const DARK_THEME = 'dark';
 
   // Grab toogle
-  const toogle = document.querySelector('[data-theme-toggle]');
+  const toggle = document.querySelector('[data-theme-toggle]');
   const rootElement = document.documentElement;
 
-  if (toogle) {
-    toogle.addEventListener('click', () => {
+  console.log('togle', toggle);
+
+  if (toggle) {
+    toggle.addEventListener('click', () => {
       rootElement.classList.toggle(DARK_THEM_CLASS);
 
       const colorMode = rootElement.classList.contains(DARK_THEME)
