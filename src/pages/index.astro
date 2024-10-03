@@ -12,6 +12,10 @@ const blogs = await Astro.glob<{
   poster: string;
   subtitle: string;
 }>('./blogs/*.md');
+
+const baseUrl = import.meta.env.PROD
+  ? '/carlos_vera/'
+  : 'http://localhost:4321';
 ---
 
 <!-- component template -->
@@ -38,13 +42,13 @@ const blogs = await Astro.glob<{
         title: 'A summary of my work history',
         gradientFrom: '#fde68a',
         gradientTo: '#fca5a5',
-        to: '/personal/work-summary',
+        to: `${baseUrl}/personal/work-summary`,
       },
       {
         title: 'What I do beyond technology',
         gradientFrom: '#6ee7b7',
         gradientTo: '#9333ea',
-        to: '/personal/beyond-tech',
+        to: `${baseUrl}/personal/beyond-tech`,
       },
       // {
       //   title: 'Blogs',
