@@ -53,8 +53,32 @@
   const toggle = document.querySelector('[data-theme-toggle]');
   const rootElement = document.documentElement;
 
-  console.log('togle', toggle);
+  const getItitialColorMode = () => {
+    const previousColorMode = window.localStorage.getItem(COLOR_MODE);
 
+    if (previousColorMode) {
+      return previousColorMode;
+    }
+
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return DARK_THEME;
+    }
+    return LIGTH_THEME;
+  };
+
+  const initialColorMode = getItitialColorMode();
+
+  const setInitialColorMode = (mode: string) => {
+    if (mode === LIGTH_THEME) {
+      rootElement.classList.remove(DARK_THEM_CLASS);
+    } else {
+      rootElement.classList.add(DARK_THEM_CLASS);
+    }
+  };
+
+  setInitialColorMode(initialColorMode);
+
+  console.log('toggle', toggle);
   if (toggle) {
     toggle.addEventListener('click', () => {
       rootElement.classList.toggle(DARK_THEM_CLASS);
