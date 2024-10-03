@@ -1,1 +1,0 @@
-const{pathname:a}=window.location,t=document.querySelector(`nav a[href="${a}"] `);t&&t.classList.add("active");const s="dark",l="color-mode",i="light",o="dark",e=document.querySelector("[data-theme-toggle]"),c=document.documentElement;e&&e.addEventListener("click",()=>{c.classList.toggle(s);const n=c.classList.contains(o)?o:i;window.localStorage.setItem(l,n)});
