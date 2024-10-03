@@ -40,8 +40,8 @@ main {
 p,
 li {
   font-size: 1rem;
-  color: var(--grey-400);
-  opacity: 0.5;
+  color: var(--grey-600);
+  opacity: 0.8;
 }
 
 li {
