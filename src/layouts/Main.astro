@@ -59,6 +59,25 @@ const { title } = Astro.props;
       };
 
       setInitialColorMode(initialColorMode);
+
+      document.addEventListener('DOMContentLoaded', () => {
+        // Grab toogle
+        const toggle = document.querySelector('[data-theme-toggle]');
+        const rootElement = document.documentElement;
+
+        console.log('toggle', toggle);
+        if (toggle) {
+          toggle.addEventListener('click', () => {
+            rootElement.classList.toggle(DARK_THEM_CLASS);
+
+            const colorMode = rootElement.classList.contains(DARK_THEME)
+              ? DARK_THEME
+              : LIGTH_THEME;
+
+            window.localStorage.setItem(COLOR_MODE, colorMode);
+          });
+        }
+      });
     </script>
   </head>
   <body>

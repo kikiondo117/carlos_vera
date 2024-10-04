@@ -2,7 +2,7 @@
 layout: ../../layouts/Blog.astro
 title: 'Remix Roadmap #15'
 subtitle: 'Version en español de Remix Roadmap #15'
-poster: '/images/remix.png'
+poster: '/images/remix.jpeg'
 ---
 
 ## Vamos iniciando con este Roadmap de mi framework favorito 🧙‍♂️
