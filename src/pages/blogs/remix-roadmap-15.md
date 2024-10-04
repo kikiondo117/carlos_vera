@@ -11,7 +11,8 @@ poster: '/images/remix.jpeg'
   - Remix V3 y React Router V7 estarán estrechamente integrados. React Router V7 tomará gran parte de las funcionabilidades de Remix algo de lo que ya se había mencionado en Roadmaps pasados solo que hago se hace enfasis en el manejo de rutas, tambien que serguirá resiviendo actualizaciones de seguridad y correcciones de errores 😅
 - Transicíon a un enfoque más centrado en el servidor:
   - Remix estará más enfocado en el lado del backend, dejando que React maneje la logica del frontend. Aun me deja un poco con dudas de cúal va a ser la responsabilidad de Remix y que va a pasar con los actions y los loaders 🤔
-- Nueva API de rutas: Una API ya mostrada anteriormente haciendola más flexible y mejora patrones de coincidencia de rutas. Ayudando a evitar la convencion de rutas basada en archivos y en carpetas. Un tenemos esa version disponible pero ahora se maneja con mayor control y flexibilidad.
+- Nueva API de rutas:
+  - Una API ya mostrada anteriormente haciendola más flexible y mejora patrones de coincidencia de rutas. Ayudando a evitar la convencion de rutas basada en archivos y en carpetas. Un tenemos esa version disponible pero ahora se maneja con mayor control y flexibilidad.
 - Compatibilidad con rutas badas en archivos:
   - No vamos a perder este enfoque si aun lo seguimos prefiriendo.
 - Mejora de tipificación y seguridad de rutas:
